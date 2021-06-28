@@ -1,0 +1,50 @@
+@import '../../styles/colors.scss';
+
+.meli-search-navbar{
+    background-color: map-get($theme-colors, "yellow");
+    padding: 10px 0;
+
+    & > .meli-container{
+    }
+
+    
+}
+
+.meli-search-navbar-form{
+    display: flex;
+}
+
+.meli-search-input{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 18px;
+    border: none;
+    width: 100%;
+    padding: 7px 15px;
+    color: #333;
+    flex: 1;
+
+    &::placeholder{
+        color: #999;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.meli-search-button{
+    padding: 0;
+    cursor: pointer;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: none;
+    background: url(../../assets/images/ic_Search.png) #eee center center no-repeat;
+    width: 36px;
+    height: 36px;
+
+    &:hover{
+        background-color: #ddd;
+    }
+}

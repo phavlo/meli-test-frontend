@@ -1,0 +1,59 @@
+@import '../../styles/breakpoint.scss';
+
+.meli-item-details{
+    border-radius: 4px;
+    padding: 32px;
+    background-color: #fff;
+    margin: 16px 0;
+
+    .meli-column-picture{
+        width: 100%;
+        
+        &, img{
+            width: 100%;
+        }
+
+        @include breakpoint(xl){
+            
+            &, img{
+                width: 680px;
+            }
+        }
+
+        
+    }
+
+    .meli-column-details{
+        flex: 1;
+    }
+
+    .meli-conditions-and-sold-quantity{
+        font-size: 14px;
+        line-height: 1;
+        color: #333;
+    }
+
+    h1{
+        font-size: 24px;
+        color: #333;
+        margin: 16px 0 32px 0;
+    }
+
+    .meli-price{
+        font-size: 46px;
+        color: #333;
+        margin-bottom: 32px;
+    }
+
+    .meli-description{
+        color: #999;
+        font-size: 16px;
+        overflow: hidden;
+
+        & > h2{
+            font-size: 28px;
+            color: #333;
+            margin: 32px 0 32px 0;
+        }
+    }
+}

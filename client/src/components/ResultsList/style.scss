@@ -1,0 +1,19 @@
+.meli-results-list{
+    border-radius: 4px;
+    padding: 16px;
+    background-color: #fff;
+    margin: 16px 0;
+
+    & > .meli-grid{
+        & > div{
+            & + div{
+                margin-top: 16px;
+
+                & > *{
+                    border-top: 2px solid #F7F7F7;
+                    padding-top: 16px;
+                }
+            }
+        }
+    }
+}

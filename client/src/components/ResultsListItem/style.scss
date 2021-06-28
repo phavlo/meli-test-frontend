@@ -1,0 +1,71 @@
+.meli-results-list-item{
+    position: relative;
+
+    .meli-grid{
+        margin-left: -16px;
+
+        & > div{
+            padding-left: 16px;
+
+            &:nth-child(1){
+                width: auto;
+            }
+            
+            &:nth-child(2){
+                flex: 1;
+            }
+        }
+    }
+
+    img{
+        width: 180px;
+        height: 180px;
+        border-radius: 4px;
+        overflow: hidden;
+        object-fit: contain;
+        border: 1px solid #eee;
+    }
+
+    .meli-item-price{
+        font-size: 24px;
+        line-height: 1;
+        color: #333;
+    }
+    
+    .meli-item-free-shipping{
+        background: url(../../assets/images/ic_shipping.png) center center no-repeat;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-left: 12px;
+    }
+
+    .meli-item-condition{
+        font-size: 12px;
+        font-weight: 300;
+        color: #666;
+        margin-right: 32px;
+    }
+
+    .mali-item-price-wrapper{
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    h2{
+        margin: 32px 0 0 0;
+        font-size: 18px;
+        font-weight: 400;
+        color: #333;
+
+        a{
+            color: inherit;
+            
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

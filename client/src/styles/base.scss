@@ -1,0 +1,94 @@
+$base-bg: #eee;
+$base-font-size: $text-font-size-16;
+$base-font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+body{
+    background-color: $base-bg;
+    font-family: $base-font-family;
+    margin: 0;
+}
+
+html{
+    font-size: $text-font-size-16;
+    line-height: 1.3;
+}
+
+img{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.meli-container{
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.meli-grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -32px;
+
+    & > *{
+        padding-left: 32px;
+        box-sizing: border-box;
+    }
+}
+
+.meli-child-width-1-1{
+    & > *{
+        width: 100%;
+    }
+}
+
+.meli-width-1-1{
+    width: 100%;
+}
+
+.meli-width-auto{
+    width: auto;
+}
+
+.meli-width-expand{
+    flex: 1;
+}
+
+.meli-flex{
+    display: flex;
+}
+
+.meli-flex-center{
+    justify-content: center;
+}
+
+.meli-flex-middle{
+    align-items: center;
+}
+
+.meli-button-primary{
+    border: none;
+    background-color: #3483fa;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px; 
+    line-height: 38px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #2968c8;
+    }
+}
+
+.meli-content-loading{
+    opacity: 0;
+}
