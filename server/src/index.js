@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import { Server } from "./src/server";
+import { Server } from "./server";
 
 (async () => {
     try {
@@ -11,5 +11,3 @@ import { Server } from "./src/server";
         console.log(error);
     }
 })();
-
-

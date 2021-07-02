@@ -1,11 +1,10 @@
 import Router from 'express';
-import validator from 'express-validator';
+import { check } from 'express-validator';
 
 import { itemById, itemsByQuery } from "../controllers";
 import { validationErrors } from "../../../core/middlewares";
 
 const router = Router();
-const { check } = validator;
 
 // 
 router.get('/items', [

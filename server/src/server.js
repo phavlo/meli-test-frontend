@@ -1,4 +1,5 @@
 import path from "path";
+import fs from 'fs';
 
 import express from "express";
 import compression from "compression";
@@ -8,12 +9,17 @@ import apicache from 'apicache';
 import { authorMiddleware, errorMiddleware } from "./core/middlewares";
 import { itemsRouter } from "./features";
 
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+
+// import App from '../../client/src/App';
+
 const cache = apicache.middleware;
 
 export class Server {
     constructor() {
         this.app  = express();
-        this.port = process.env.PORT || 3001;
+        this.port = process.env.PORT || 80;
 
         const client_path = path.resolve('..', 'client', 'build');
         this.client_path = process.env.CLIENT_PATH || client_path;
@@ -36,9 +42,22 @@ export class Server {
         this.app.use( '/api', itemsRouter);
 
         // React App
-        this.app.get('*', (_, response) => {
-            const filePath = path.resolve(this.client_path, 'index.html');
-            response.sendFile(filePath);
+        this.app.get('/*', (_, res) => {
+            // Todo
+            // const app = ReactDOMServer.renderToString(React.createElement(App));
+            
+            const indexFile = path.resolve(this.client_path, 'index.html');
+            fs.readFile(indexFile, 'utf8', (err, data) => {
+                if (err) {
+                    console.error('Something went wrong:', err);
+                    return res.status(500).send('Oops, better luck next time!');
+                }
+            
+                return res.send(
+                    // data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
+                    data
+                );
+            });
         });
     }
 
