@@ -1,3 +1,7 @@
+Prueba práctica de frontend para Mercado libre.
+
+[http://meli.phavlo.com](http://meli.phavlo.com) para ver una demo en el navegador.
+
 # Front-End Test Práctico
 
 Bienvenido al test práctico para aspirantes al área de front-end de Mercado Libre.
