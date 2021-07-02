@@ -1,0 +1,20 @@
+$button-primary-background: map-get($theme-colors, "blue");
+$button-primary-background-hover: darken($button-primary-background, 10%);
+$button-primary-color: #fff;
+$button-primary-font-size: $global-font-size-14;
+$button-primary-line-height: 2.57;
+$button-primary-border-radius: $global-radius;
+
+.meli-button-primary{
+    border: none;
+    background-color: $button-primary-background;
+    color: $button-primary-color;
+    border-radius: $button-primary-border-radius;
+    font-size: $button-primary-font-size; 
+    line-height: $button-primary-line-height;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $button-primary-background-hover;
+    }
+}

@@ -1,11 +1,22 @@
+@import '../../styles/main.scss';
+
+$breadcrumbs-font-size: $global-font-size-14;
+$breadcrumbs-color: map-get($theme-colors, "grey-light");
+$breadcrumbs-margin: $global-margin-small;
+$breadcrumbs-separator-margin: $breadcrumbs-margin / 2;
+
 .meli-breadcrumbs-nav{
     list-style: none;
     padding-left: 0;
-    font-size: 14px;
-    line-height: 1;
-    color: #999;
+
     display: flex;
-    margin: 16px 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    
+    font-size: $breadcrumbs-font-size;
+    line-height: 1;
+    color: $breadcrumbs-color;
+    margin: $breadcrumbs-margin 0;
 
     a{
         color: inherit;
@@ -16,11 +27,13 @@
     }
 
     & > li{
+        flex: none;
+
         & + li{
             &:before{
                 content: ">";
                 display: inline-block;
-                margin: 0 8px;
+                margin: 0 $breadcrumbs-separator-margin;
             }
         }
 

@@ -1,17 +1,24 @@
+@import '../../styles/main.scss';
+
+$results-list-padding: $global-margin-small;
+$results-list-radius: $global-radius;
+$results-list-border: 2px solid #F7F7F7;
+$results-list-background-color: #fff;
+
 .meli-results-list{
-    border-radius: 4px;
-    padding: 16px;
-    background-color: #fff;
-    margin: 16px 0;
+    border-radius: $results-list-radius;
+    padding: $results-list-padding;
+    background-color: $results-list-background-color;
+    margin: $results-list-padding 0;
 
     & > .meli-grid{
         & > div{
             & + div{
-                margin-top: 16px;
+                margin-top: $results-list-padding;
 
                 & > *{
-                    border-top: 2px solid #F7F7F7;
-                    padding-top: 16px;
+                    border-top: $results-list-border;
+                    padding-top: $results-list-padding;
                 }
             }
         }

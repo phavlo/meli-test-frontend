@@ -17,7 +17,7 @@ export const ResultsList = ({ items = [] }) => {
     return (
         <section className="meli-results-list">
             <div className="meli-grid meli-child-width-1-1">
-                {list}
+                {list.length ? list : <div>Sin resultados. Prueba buscar otra cosa.</div>}
             </div>
         </section>
     )

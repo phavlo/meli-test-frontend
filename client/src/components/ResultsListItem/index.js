@@ -28,7 +28,7 @@ export const ResultsListItem = ({data}) => {
 
                 <div>
                     <div className="mali-item-price-wrapper">
-                        <div className="meli-item-price">{price}<span className={free_shipping}></span></div>
+                        <div className="meli-item-price">{price}<sup>00</sup><span className={free_shipping}></span></div>
                         <div className="meli-item-condition">{condition}</div>
                     </div>
                     <h2>

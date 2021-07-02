@@ -25,7 +25,7 @@ export const ItemDetails = ({ item }) => {
                     <div>
                         <div className="meli-conditions-and-sold-quantity">{condition} - {item.sold_quantity} vendidos</div>
                         <h1>{item.title}</h1>
-                        <div className="meli-price">{price}</div>
+                        <div className="meli-price">{price}<sup>00</sup></div>
 
                         <button className="meli-button-primary meli-width-1-1">Comprar</button>
                     </div>

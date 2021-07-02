@@ -1,0 +1,12 @@
+$grid-gap: $global-margin-large;
+
+.meli-grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -($grid-gap);
+
+    & > *{
+        padding-left: $grid-gap;
+        box-sizing: border-box;
+    }
+}

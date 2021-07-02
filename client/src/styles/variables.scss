@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap');
 
 // Base
-$font-family-base: 'Open+Sans', -apple-system, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+// $global-font-family: 'Roboto', -apple-system, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+$global-font-family: -apple-system,"Helvetica Neue",Arial,sans-serif;
 
 // Sizes
-$input-font-size-18: 18px;
+$global-input-font-size: 18px;
 
-$text-font-size-14: 14px;
-$text-font-size-16: 16px;
-$text-font-size-24: 24px;
-$text-font-size-28: 28px;
-$text-font-size-46: 46px;
+$global-font-size-14: 14px;
+$global-font-size-16: 16px;
+$global-font-size-24: 24px;
+$global-font-size-28: 28px;
+$global-font-size-46: 46px;
 
-$margin-16: 16px;
-$margin-32: 32px;
+$global-margin-small: 16px;
+$global-margin-large: 32px;
+
+$global-radius: 4px;

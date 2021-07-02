@@ -1,10 +1,23 @@
-@import '../../styles/breakpoint.scss';
+@import '../../styles/main.scss';
+
+$item-details-padding: $global-margin-large;
+$item-details-margin: $global-margin-small;
+$item-details-margin-large: $global-margin-large;
+$item-details-radius: $global-radius;
+$item-details-background-color: #fff;
+$item-details-image-size: 680px;
+$item-details-conditions-font-size: $global-font-size-14;
+$item-details-color: map-get($theme-colors, "grey-dark");
+$item-details-title-font-size: $global-font-size-24;
+$item-details-price-font-size: $global-font-size-46;
+$item-details-description-font-size: $global-font-size-28;
+$item-details-description-color: map-get($theme-colors, "grey-light");
 
 .meli-item-details{
-    border-radius: 4px;
-    padding: 32px;
+    border-radius: $item-details-radius;
+    padding: $item-details-padding;
     background-color: #fff;
-    margin: 16px 0;
+    margin: $item-details-margin 0;
 
     .meli-column-picture{
         width: 100%;
@@ -13,10 +26,15 @@
             width: 100%;
         }
 
-        @include breakpoint(xl){
+        @include breakpoint(lg){
             
             &, img{
-                width: 680px;
+                width: $item-details-image-size;
+            }
+
+            img{
+                height: $item-details-image-size;
+                object-fit: contain;
             }
         }
 
@@ -28,32 +46,37 @@
     }
 
     .meli-conditions-and-sold-quantity{
-        font-size: 14px;
+        font-size: $item-details-conditions-font-size;
         line-height: 1;
-        color: #333;
+        color: $item-details-color;
     }
 
     h1{
-        font-size: 24px;
-        color: #333;
-        margin: 16px 0 32px 0;
+        font-size: $item-details-title-font-size;
+        color: $item-details-color;
+        margin: $item-details-margin 0 $item-details-margin-large 0;
     }
 
     .meli-price{
-        font-size: 46px;
-        color: #333;
-        margin-bottom: 32px;
+        font-size: $item-details-price-font-size;
+        color: $item-details-color;
+        margin-bottom: $item-details-margin-large;
+
+        sup{
+            font-size: $item-details-price-font-size * 0.4;
+            line-height: 1;
+        }
     }
 
     .meli-description{
-        color: #999;
-        font-size: 16px;
+        color: $item-details-description-color;
+        font-size: $item-details-margin;
         overflow: hidden;
 
         & > h2{
-            font-size: 28px;
-            color: #333;
-            margin: 32px 0 32px 0;
+            font-size: $item-details-description-font-size;
+            color: $item-details-color;
+            margin: $item-details-margin-large 0;
         }
     }
 }
