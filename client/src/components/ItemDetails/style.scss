@@ -19,6 +19,14 @@ $item-details-description-color: map-get($theme-colors, "grey-light");
     background-color: #fff;
     margin: $item-details-margin 0;
 
+    .meli-grid{
+        margin-top: -$item-details-margin-large;
+
+        & > *{
+            margin-top: $item-details-margin-large;
+        }
+    }
+
     .meli-column-picture{
         width: 100%;
         

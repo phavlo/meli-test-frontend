@@ -12,6 +12,7 @@ $breadcrumbs-separator-margin: $breadcrumbs-margin / 2;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
     
     font-size: $breadcrumbs-font-size;
     line-height: 1;
@@ -31,7 +32,7 @@ $breadcrumbs-separator-margin: $breadcrumbs-margin / 2;
 
         & + li{
             &:before{
-                content: ">";
+                content: "\203A";
                 display: inline-block;
                 margin: 0 $breadcrumbs-separator-margin;
             }
