@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist",
   "scripts": {
-    "start": "npm run build:server && node dist",
+    "start": "node dist",
+    "build:start": "npm run build:server && node dist",
     "build:server": "babel src --out-dir dist",
     "start:server": "babel-node src/index.js"
   },
