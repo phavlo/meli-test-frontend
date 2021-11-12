@@ -4,13 +4,13 @@ Este proyecto se inició con [Create React App](https://github.com/facebook/crea
 
 ## Para correr el proyecto en modo dev:
 
-### `npm start`
+`npm start`
 
 Abrir [http://localhost:3000](http://localhost:3000) para ver en el navegador.
 
 ## Para realizar el `build` de producción:
 
-### `npm run build`
+`npm run build`
 
 El `build` de la app se guardara en la carpeta `build`
 
